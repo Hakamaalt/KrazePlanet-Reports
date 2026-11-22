@@ -58,7 +58,7 @@ https://docs.pwnedbox.site/?q=hakama%27%22%3C%3E%3CScriPt%3Ealert(1)%3C/ScriPt%3
 
 **Observed Result:**
 
-The `x8scan` tool generated a transformed GET URL containing the `fname`, `lname`, and `q` parameters. A JavaScript test payload was supplied through the `q` parameter to check whether the input is reflected and executed by the browser. Successful JavaScript execution has not yet been confirmed.
+The `x8scan` tool generated a transformed GET URL containing the `fname`, `lname`, and `q` parameters. A JavaScript test payload was supplied through the `q` parameter to check whether the input is reflected and executed by the browser. Successful JavaScript execution has been confirmed.
 
 **Screenshot:**
 
