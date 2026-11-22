@@ -39,7 +39,7 @@ The website's search functionality appears vulnerable to Reflected XSS through t
 
 ## Impact
 
-If the payload executes successfully, an attacker could run JavaScript in the context of the PubMed portal's origin. This could allow manipulation of displayed search results or presentation of deceptive content to visitors.
+If the payload executes successfully, an attacker could run the JavaScript in the context of the PubMed portal's origin. This could allow manipulation of displayed search results or presentation of deceptive content to visitors.
 
 ## Remediation
 
