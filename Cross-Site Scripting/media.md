@@ -72,9 +72,9 @@ The supplied JavaScript payload was executed through the `username` parameter. T
 
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/56d5395a-140c-4b39-95db-c9b4827f614a" />
 
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/256b09fe-54d1-4733-9444-feda2d5534c0" />
-
 <img width="1105" height="322" alt="image" src="https://github.com/user-attachments/assets/cfd8a800-fe28-410d-b80b-e823a0d50c51" />
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/256b09fe-54d1-4733-9444-feda2d5534c0" />
 
 ## Impact
 
