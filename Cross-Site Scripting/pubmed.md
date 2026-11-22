@@ -18,7 +18,7 @@ The website's search functionality appears vulnerable to Reflected XSS through t
 3. Observe whether a JavaScript alert dialog displaying `1` appears.
 4. Dismiss the alert and inspect the reflected search term on the page.
 
-## POC (Proof of Concept)
+## POC (Proof of Concept):
 
 **Target URL:** https://pubmed.pwnedbox.site/
 
